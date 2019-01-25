@@ -1,0 +1,17 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th><th>Age</th><th>Choose a number</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: usersData">
+        <tr>
+            <td data-bind="text: name"></td>
+            <td data-bind="text: age"></td>
+            <td>
+                <select data-bind="options: [1,2,3,4,5],
+                                    value: point"></select>
+            </td>
+        </tr>
+    </tbody>
+</table>

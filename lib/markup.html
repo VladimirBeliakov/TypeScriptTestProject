@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src = "https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js" type = "text/javascript" defer></script>
+		
+		<link rel="stylesheet" href="style.css" />
+		<script type="text/javascript" src="knockoutIndex.js" defer></script>
+		
+	</head>
+	<body>
+			<input data-bind="attr: { disabled: isTextBoxDisabled }" />
+			<button data-bind="click: disableEnable">On/Off</button>
+			<h2 data-bind="text: label"></h2>
+			<button data-bind="click: add">Add</button>
+			<span>Item count: </span>
+			<span data-bind="text: itemCount"></span>
+			<table>
+				<thead><td>Input</td><td>Output</td></thead>
+				<tbody>
+					<tr>
+						<td>
+							<input type="text" data-bind="value: input">
+						</td>
+						<td data-bind="text: output"></td>
+					</tr>
+				</tbody>
+				<tbody data-bind="foreach: array">
+					<tr>
+						<td data-bind="text: firstName, style: { color:     greenOrRed() ? 'red' : 'green' }"></td>
+						<td data-bind="text: getLastName($index())"></td>
+						<td><a href="#" data-bind="click: $root.remove">X</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- <div data-bind="visible: counter() >= 3">You can see this :)</div>
+			<div data-bind="html: myMarkup"></div>
+			<div data-bind="css: { 'my-class': counter() <= 3 }">Applying my-class.</div>
+	
+			<p data-bind="ifnot: !visibleIf()">Visible only when there are 4 or more items.</p>
+	
+			<div data-bind="with: objectWith">
+				<span data-bind="text: prop1"></span>
+				<span data-bind="text: prop2"></span>
+			</div>
+	
+			<ol>
+				<li>There is a ko comment underneath</li>
+				ko with: objectWith
+				<li data-bind="text: prop1"></li>
+				<li data-bind="text: prop2"></li>
+				/ko
+			</ol>
+	
+			<ol data-bind="foreach: { data: categories, as: 'category' }">
+				<li data-bind="text: name"></li>
+				<ul data-bind="foreach: { data: items, as: 'item' }">
+					<li>
+						<span data-bind="text: item"></span>
+					</li>
+				</ul>
+			</ol>
+	
+			<ol>
+				<li>Beyond the foreach binding.</li>
+				ko foreach: foreachInCom
+				<li data-bind="text: $data"></li>
+				/ko
+			</ol> -->
+	
+			<!-- Trying to create a component -->
+	</body>    
+</html>
+
+
